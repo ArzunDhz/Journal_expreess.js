@@ -1,0 +1,31 @@
+
+
+<%- include("partials/header") %>
+
+<h1>Home</h1>
+<p>  <%= homeStartingContent %> </p>
+
+
+
+
+
+
+
+
+
+
+<% posts.forEach(function(post){ %>
+
+ <% var newwtitle = post.title %>
+  <% var newwPost = post.post %>
+ <h2><%= newwtitle %></h2>
+  <p><%= newwPost.substring(0,100)+"..." %>    <a href="/posts/<%=newwtitle%>">Read More </a>
+</p>
+  <% })  %>
+
+
+
+
+<a class="plus" href="/compose">  <i class="fas fa-plus fa-3x"></i>   </a>
+
+<%- include("partials/footer") %>
